@@ -1,0 +1,14 @@
+{
+  "name": "bugs",
+  "version": "1.0.0",
+  "description": "bugs",
+  "scripts": {
+  	"game": "node_modules/.bin/browserify game.js > game.compiled.js && firefox game.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rouslan Placella",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.1.1"
+  }
+}
