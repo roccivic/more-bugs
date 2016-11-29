@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "bugs",
   "scripts": {
-  	"game": "node_modules/.bin/browserify game.js > game.compiled.js && firefox game.html",
+    "start": "node_modules/.bin/browserify game.js > game.min.js && firefox game.html",
+    "dist": "node_modules/.bin/browserify game.js | node_modules/.bin/uglifyjs | node_modules/.bin/jscrush > game.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rouslan Placella",
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^13.1.1"
+    "browserify": "^13.1.1",
+    "jscrush": "0.0.0",
+    "uglifyjs": "^2.4.10"
   }
 }
