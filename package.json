@@ -3,15 +3,24 @@
   "version": "1.0.0",
   "description": "bugs",
   "scripts": {
-    "start": "node_modules/.bin/browserify game.js > game.min.js && firefox game.html",
-    "dist": "node_modules/.bin/browserify game.js | node_modules/.bin/uglifyjs | node_modules/.bin/jscrush > game.min.js",
+    "dist": "node_modules/.bin/browserify lib/game.js | node_modules/.bin/uglifyjs | node_modules/.bin/jscrush > dist/game.min.js",
+    "start": "npm run browserify && npm run open && npm run concurrent",
+    "browserify": "node_modules/.bin/browserify lib/game.js > dist/game.min.js",
+    "open": "sleep 2 && opn demo/game.html &",
+    "concurrent": "node_modules/.bin/concurrently 'npm run livereload' 'npm run watch'",
+    "watch": "node_modules/.bin/watch 'npm run browserify' lib",
+    "livereload": "cd dist && ../node_modules/.bin/livereload",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rouslan Placella",
   "license": "MIT",
   "devDependencies": {
     "browserify": "^13.1.1",
+    "concurrently": "^3.1.0",
     "jscrush": "0.0.0",
-    "uglifyjs": "^2.4.10"
+    "livereload": "^0.6.0",
+    "opn-cli": "^3.1.0",
+    "uglifyjs": "^2.4.10",
+    "watch": "^1.0.1"
   }
 }
