@@ -10,7 +10,6 @@
 
 # todo
 
-- add eyes to bugs
 - add leg animation
 - cleanup properly on exit (remove setTimeouts, etc)
 - check cookie periodically to sync across tabs
