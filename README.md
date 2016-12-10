@@ -10,7 +10,6 @@
 
 # todo
 
-- fix "spinning bug" bug
 - add eyes to bugs
 - add leg animation
 - cleanup properly on exit (remove setTimeouts, etc)
