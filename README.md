@@ -7,3 +7,12 @@
 - see the settings in ```lib/settings.js```
 - launch demo: ```npm start```
 - create build: ```npm dist```
+
+# todo
+
+- fix "spinning bug" bug
+- add eyes to bugs
+- add leg animation
+- cleanup properly on exit (remove setTimeouts, etc)
+- check cookie periodically to sync across tabs
+- highscore submission
