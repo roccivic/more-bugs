@@ -1,3 +1,6 @@
+# Deprecation notice
+THIS REPOSTORY IS DEPRECATED, NO LONGER SUPPORTED, CONTAINS SECURITY VULNERABILITIES AND SHOULD NOT BE USED.
+
 # more-bugs
 
 - puts bugs in your browser
